@@ -20,7 +20,7 @@ const layer2: VectorTileLayer<VectorTileSource<Feature<Point>>> =
       format: new MVT({featureClass: Feature}),
     }),
   });
-layer2.getFeaturesInExtent([0, 0, 1, 1])[0].getGeometry().getCoordinates();
+layer2.getFeaturesInExtent([0, 0, 1, 1])[0]?.getGeometry()?.getCoordinates();
 
 const layer3: VectorTileLayer<VectorTileSource<Feature<Point>>> =
   new VectorTileLayer({
@@ -28,7 +28,7 @@ const layer3: VectorTileLayer<VectorTileSource<Feature<Point>>> =
       format: new MVT({featureClass: Feature}),
     }),
   });
-layer3.getFeaturesInExtent([0, 0, 1, 1])[0].getGeometry().getCoordinates();
+layer3.getFeaturesInExtent([0, 0, 1, 1])[0]?.getGeometry()?.getCoordinates();
 
 const layer4: VectorTileLayer<VectorTileSource<Feature<Point>>> =
   new VectorTileLayer({
@@ -37,4 +37,4 @@ const layer4: VectorTileLayer<VectorTileSource<Feature<Point>>> =
       url: 'http://example.com',
     }),
   });
-layer4.getFeaturesInExtent([0, 0, 1, 1])[0].getGeometry().getCoordinates();
+layer4.getFeaturesInExtent([0, 0, 1, 1])[0]?.getGeometry()?.getCoordinates();
